@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ .form-control {
+        border: 1px solid #ced4da;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+.list-item{
+    position: relative; 
+    display: block;
+    padding:10px;
+    color: #000000;
+    text-decoration: none;
+    background-color:#fff;
+    border-bottom: 1px solid #00000021;
+}
+.list-item:first-child{
+    border-radius: 5px 5px 0 0 ;
+}
+.list-item:last-child{
+    border-radius: 0 0 5px 5px ;
+}
+.list-item span,
+.list-item img{
+    cursor: pointer;
+}
