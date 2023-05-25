@@ -18,7 +18,7 @@ if (!todos) {
 	]
 	localStorage.setItem("todos", JSON.stringify(todos))
 }
-//84
+
 // func to create or update todos list in ui
 function createTodos(todos) {
 	let todosList = document.querySelector("#todos-list")
@@ -42,14 +42,14 @@ function createTodos(todos) {
 
 		// append li to todosList
 		todosList.append(li)
-//85
+
 		// add deleteBtn functionality
 		deleteBtn.addEventListener("click", e => {
 			todos.splice(index, 1)
 			localStorage.setItem("todos", JSON.stringify(todos))
 			createTodos(todos)
 		})
-//86
+
 		// add complete functionality
 		content.addEventListener("click", e => {
 			todos[index].status = !todos[index].status
@@ -93,7 +93,7 @@ Array.from(actions.children).forEach(action => {
 					<input class="form-control block w-full py-1.5 px-3 text-base font-normal text-[#212529] bg-white bg-clip-padding rounded-md" name="search" placeholder="Search todos ..">
 				</form>
 			`
- /*89*/           let search=document.querySelector("#search")
+           let search=document.querySelector("#search")
             search.addEventListener("keyup",e=>{
                 e.preventDefault()
                 if(search.search.value){
